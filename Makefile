@@ -31,7 +31,7 @@ init:
 	@git init
 	@git add .
 	@git commit -am "FIRST"
-	@hub create joshrtay/redux-log -d Simple log of redux actions, good for testing.
+	@hub create joshrtay/redux-log -d "Simple log of redux actions, good for testing.""
 	@travis enable
 	@git push -u origin master
 
