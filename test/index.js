@@ -28,3 +28,11 @@ test('should pass actions to next', (t) => {
   t.deepEqual(log1, log2)
   t.end()
 })
+
+test('should not effect return', (t) => {
+  let log = []
+  let io = bind([reduxLog(log), ctx => next => action => action])
+  t.deepEqual(io({type: 'Foo'}), {type: 'Foo'})
+  t.deepEqual(log[0], {type: 'Foo'})
+  t.end()
+})
