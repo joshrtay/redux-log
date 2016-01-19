@@ -2,7 +2,7 @@
   "name": "redux-log",
   "description": "Simple log of redux actions, good for testing.",
   "repository": "git://github.com/joshrtay/redux-log.git",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "license": "MIT",
   "main": "lib/index.js",
   "scripts": {
