@@ -15,17 +15,24 @@ Simple log of redux actions, good for testing.
 ## Usage
 
 ```js
-var reduxLog = require('redux-log')
+import reduxLog from 'redux-log'
+import flow, {flo} from 'redux-flo'
+import bind from '@f/bind-middleware'
 
+var log = []
+var io = bind([reduxLog(log)])
+
+io({type: 'FETCH'})
+log // => [{type: 'FETCH'}]
 ```
 
 ## API
 
-### reduxLog(arg)
+### reduxLog(log)
 
-- `arg` -
+- `log` - an array to store the actions in
 
-**Returns:**
+**Returns:** redux style middleware
 
 ## License
 
